@@ -29,14 +29,48 @@ public class MainActivity extends AppCompatActivity {
         // Now here we will add some dummy data in our model class
 
         List<RecentsData> recentsDataList = new ArrayList<>();
-        recentsDataList.add(new RecentsData("Gateway of India","Mumbai","Free", R.drawable.goi4, List.of(R.drawable.goi1, R.drawable.goi2, R.drawable.goi3)));
-        recentsDataList.add(new RecentsData("Marine Drive","Mumbai","Free",R.drawable.md2, List.of(R.drawable.md1, R.drawable.md3)));
-        recentsDataList.add(new RecentsData("Victoria Memorial","Kolkata","$15",R.drawable.vm5, List.of(R.drawable.vm2, R.drawable.vm3, R.drawable.vm4)));
-        recentsDataList.add(new RecentsData("Howrah Bridge","Kolkata","Free",R.drawable.hb3, List.of(R.drawable.hb1, R.drawable.hb2, R.drawable.hb4)));
-        recentsDataList.add(new RecentsData("Red Fort","Delhi","$15",R.drawable.rf1, List.of(R.drawable.rf2, R.drawable.rf3, R.drawable.rf4)));
-        recentsDataList.add(new RecentsData("India Gate","Delhi","Free",R.drawable.ig1, List.of(R.drawable.ig2, R.drawable.ig3, R.drawable.ig4)));
-        recentsDataList.add(new RecentsData("Vivekananda House","Chennai","$5",R.drawable.vh1, List.of(R.drawable.vh2, R.drawable.vh3)));
-        recentsDataList.add(new RecentsData("Marundeeshwarar Temple","Chennai","Free",R.drawable.mt3, List.of(R.drawable.mt1, R.drawable.mt2)));
+        recentsDataList.add(new RecentsData(
+            "Gateway of India",
+            "Mumbai",
+            "Day 1, 10:00 - 17:00",
+            List.of(R.drawable.goi4, R.drawable.goi1, R.drawable.goi2, R.drawable.goi3)
+        ));
+        recentsDataList.add(new RecentsData(
+            "Marine Drive",
+            "Mumbai",
+            "Day 1, 17:00 - 21:00",
+            List.of(R.drawable.md2, R.drawable.md1, R.drawable.md3)
+        ));
+        recentsDataList.add(new RecentsData(
+            "Victoria Memorial",
+            "Kolkata",
+            "Day 1",
+            List.of(R.drawable.vm5, R.drawable.vm2, R.drawable.vm3, R.drawable.vm4)
+        ));
+        recentsDataList.add(new RecentsData(
+            "Red Fort",
+            "Delhi",
+            "Day 1",
+            List.of(R.drawable.rf1, R.drawable.rf2, R.drawable.rf3, R.drawable.rf4)
+        ));
+        recentsDataList.add(new RecentsData(
+            "India Gate",
+            "Delhi",
+            "Day 2",
+            List.of(R.drawable.ig1, R.drawable.ig2, R.drawable.ig3, R.drawable.ig4)
+        ));
+        recentsDataList.add(new RecentsData(
+            "Vivekananda House",
+            "Chennai",
+            "Day 1",
+            List.of(R.drawable.vh1, R.drawable.vh2, R.drawable.vh3)
+        ));
+        recentsDataList.add(new RecentsData(
+            "Marundeeshwarar Temple",
+            "Chennai",
+            "Day 2",
+            List.of(R.drawable.mt3, R.drawable.mt1, R.drawable.mt2)
+        ));
 
         setRecentRecycler(recentsDataList);
 

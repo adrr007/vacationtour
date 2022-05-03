@@ -41,20 +41,22 @@ public class RecentsAdapter extends RecyclerView.Adapter<RecentsAdapter.RecentsV
     @Override
     public void onBindViewHolder(@NonNull RecentsViewHolder holder, int position) {
 
-        holder.cityName.setText(recentsDataList.get(position).getCityName());
-        holder.placeName.setText(recentsDataList.get(position).getPlaceName());
-        holder.price.setText(recentsDataList.get(position).getPrice());
-        holder.placeImage.setImageResource(recentsDataList.get(position).getImageUrl());
+        final RecentsData recentsData = recentsData;
+
+        holder.cityName.setText(recentsData.getCityName());
+        holder.placeName.setText(recentsData.getPlaceName());
+        holder.price.setText(recentsData.getPrice());
+        holder.placeImage.setImageResource(recentsData.getImages().get(0));
+
         final int finalposition= position;
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(context, DetailsActivity.class);
-                i.putExtra("cityName",recentsDataList.get(finalposition).getCityName());
-                i.putExtra("placeName",recentsDataList.get(finalposition).getPlaceName());
-                i.putExtra("price",recentsDataList.get(finalposition).getPrice());
-                i.putExtra("placeImage",recentsDataList.get(finalposition).getImageUrl());
-                i.putExtra("galleryImages", recentsDataList.get(finalposition).getGalleryImages());
+                Intent i = new Intent(context, DetailsActivity.class);
+                i.putExtra("cityName", recentsData.getCityName());
+                i.putExtra("placeName", recentsData.getPlaceName());
+                i.putExtra("price", recentsData.getPrice());
+                i.putExtra("images", recentsData.getImages());
                 context.startActivity(i);
             }
         });

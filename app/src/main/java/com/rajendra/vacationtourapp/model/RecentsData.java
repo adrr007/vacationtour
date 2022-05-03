@@ -8,31 +8,21 @@ public class RecentsData {
     String placeName;
     String cityName;
     String price;
-    Integer imageUrl;
-    ArrayList<Integer> galleryImages;
+    ArrayList<Integer> images;
 
-    public RecentsData(String placeName, String cityName, String price, Integer imageUrl, List<Integer> galleryImages) {
+    public RecentsData(String placeName, String cityName, String price, List<Integer> images) {
         this.placeName = placeName;
         this.cityName = cityName;
         this.price = price;
-        this.imageUrl = imageUrl;
-        this.galleryImages = new ArrayList<>(galleryImages);
+        this.images = new ArrayList<>(images);
     }
 
-    public ArrayList<Integer> getGalleryImages() {
-        return galleryImages;
+    public ArrayList<Integer> getImages() {
+        return images;
     }
 
-    public void setGalleryImages(ArrayList<Integer> galleryImages) {
-        this.galleryImages = galleryImages;
-    }
-
-    public Integer getImageUrl() {
-        return imageUrl;
-    }
-
-    public void setImageUrl(Integer imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setImages(ArrayList<Integer> images) {
+        this.images = images;
     }
 
     public String getPlaceName() {

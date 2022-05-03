@@ -27,13 +27,14 @@ public class DetailsActivity extends AppCompatActivity {
         ((TextView) findViewById(R.id.textView11))
                 .setText(intent.getStringExtra("price"));
 
-        ((ImageView) findViewById(R.id.imageView3))
-                .setImageResource(intent.getIntExtra("placeImage", -1));
+        List<Integer> images = intent.getIntegerArrayListExtra("images");
 
-        List<Integer> galleryImages = intent.getIntegerArrayListExtra("galleryImages");
+        ((ImageView) findViewById(R.id.imageView3))
+                .setImageResource(images.get(0));
+
         List<Integer> galleryImageViews = List.of(R.id.imageView8, R.id.imageView9, R.id.imageView10);
         for(int i = 0; i < galleryImageViews.size(); i++)
             ((ImageView) findViewById(galleryImageViews.get(i)))
-                    .setImageResource(galleryImages.get(i % galleryImages.size()));
+                    .setImageResource(images.get((i + 1) % images.size()));
     }
 }

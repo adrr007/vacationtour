@@ -18,6 +18,15 @@ public class DetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_details);
         Intent intent = getIntent();
 
+        ((TextView) findViewById(R.id.button))
+            .setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://example.com"));
+                    context.startActivity(i);
+                }
+            });
+
         ((TextView) findViewById(R.id.textView6))
             .setText(intent.getStringExtra("placeName"));
 

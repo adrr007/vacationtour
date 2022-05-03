@@ -41,7 +41,7 @@ public class RecentsAdapter extends RecyclerView.Adapter<RecentsAdapter.RecentsV
     @Override
     public void onBindViewHolder(@NonNull RecentsViewHolder holder, int position) {
 
-        final RecentsData recentsData = recentsData;
+        final RecentsData recentsData = recentsDataList.get(position);
 
         holder.cityName.setText(recentsData.getCityName());
         holder.placeName.setText(recentsData.getPlaceName());

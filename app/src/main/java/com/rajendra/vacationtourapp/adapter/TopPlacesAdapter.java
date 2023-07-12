@@ -1,6 +1,7 @@
 package com.rajendra.vacationtourapp.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +11,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.rajendra.vacationtourapp.DetailsActivity;
 import com.rajendra.vacationtourapp.R;
+import com.rajendra.vacationtourapp.TopPlacesActivity;
 import com.rajendra.vacationtourapp.model.TopPlacesData;
 
 import java.util.List;
@@ -37,11 +40,23 @@ public class TopPlacesAdapter extends RecyclerView.Adapter<TopPlacesAdapter.TopP
 
     @Override
     public void onBindViewHolder(@NonNull TopPlacesViewHolder holder, int position) {
-
-        holder.cityName.setText(topPlacesDataList.get(position).getcityName());
+        final TopPlacesData placesData = topPlacesDataList.get(position);
         holder.placeName.setText(topPlacesDataList.get(position).getPlaceName());
         holder.price.setText(topPlacesDataList.get(position).getPrice());
         holder.placeImage.setImageResource(topPlacesDataList.get(position).getImageUrl());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(context, TopPlacesActivity.class);
+                i.putExtra("placeName", placesData.getPlaceName());
+                i.putExtra("price", placesData.getPrice());
+                i.putExtra("image", placesData.getImageUrl());
+                i.putExtra("about", placesData.getAbout());
+                i.putExtra("itinerary", placesData.getItinerary());
+                context.startActivity(i);
+            }
+        });
     }
 
     @Override

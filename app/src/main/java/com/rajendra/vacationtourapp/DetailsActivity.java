@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,8 +24,8 @@ public class DetailsActivity extends AppCompatActivity {
             .setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://example.com"));
-                    context.startActivity(i);
+                    Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(intent.getStringExtra("hyperlink")));
+                    startActivity(i);
                 }
             });
 
@@ -35,6 +37,9 @@ public class DetailsActivity extends AppCompatActivity {
 
         ((TextView) findViewById(R.id.textView11))
                 .setText(intent.getStringExtra("price"));
+
+        ((TextView) findViewById(R.id.textView14))
+                .setText(intent.getStringExtra("about"));
 
         List<Integer> images = intent.getIntegerArrayListExtra("images");
 

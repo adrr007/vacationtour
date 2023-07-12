@@ -9,11 +9,15 @@ public class RecentsData {
     String cityName;
     String price;
     ArrayList<Integer> images;
+    String hyperlink;
+    String about;
 
-    public RecentsData(String placeName, String cityName, String price, List<Integer> images) {
+    public RecentsData(String placeName, String cityName, String price,  String hyperlink, String about, List<Integer> images) {
         this.placeName = placeName;
         this.cityName = cityName;
         this.price = price;
+        this.hyperlink = hyperlink;
+        this.about = about;
         this.images = new ArrayList<>(images);
     }
 
@@ -48,4 +52,12 @@ public class RecentsData {
     public void setPrice(String price) {
         this.price = price;
     }
+
+    public String getHyperlink(){ return hyperlink;}
+
+    public void setHyperlink(String hyperlink) { this.hyperlink = hyperlink; }
+
+    public String getAbout() { return about; }
+
+    public void setAbout(String about) { this.about = about; }
 }

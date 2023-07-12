@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">VacationTourApp</string>
+    <string name="hyperlink"><a href="https://www.maharashtratourism.gov.in/gateway-of-india">Start Booking your trip</a></string>
+    <string name="hyperlink1"><a href="https://docs.google.com/forms/d/e/1FAIpQLSf3IyN6hg2o6McR3XVViERoEFJ5QB96S5iykrjDk5fHYcdo-Q/viewform">Start Booking your trip</a></string>
 </resources>

@@ -3,8 +3,9 @@ package com.rajendra.vacationtourapp.model;
 public class TopPlacesData {
 
     String placeName;
-    String cityName;
+    String itinerary;
     String price;
+    String about;
     Integer imageUrl;
 
     public Integer getImageUrl() {
@@ -15,10 +16,11 @@ public class TopPlacesData {
         this.imageUrl = imageUrl;
     }
 
-    public TopPlacesData(String placeName, String cityName, String price, Integer imageUrl) {
+    public TopPlacesData(String placeName, String itinerary, String price, String about, Integer imageUrl) {
         this.placeName = placeName;
-        this.cityName = cityName;
+        this.itinerary = itinerary;
         this.price = price;
+        this.about = about;
         this.imageUrl = imageUrl;
     }
 
@@ -30,12 +32,12 @@ public class TopPlacesData {
         this.placeName = placeName;
     }
 
-    public String getcityName() {
-        return cityName;
+    public String getItinerary() {
+        return itinerary;
     }
 
-    public void setcityName(String cityName) {
-        this.cityName = cityName;
+    public void setItinerary(String itinerary) {
+        this.itinerary = itinerary;
     }
 
     public String getPrice() {
@@ -44,5 +46,13 @@ public class TopPlacesData {
 
     public void setPrice(String price) {
         this.price = price;
+    }
+
+    public String getAbout() {
+        return about;
+    }
+
+    public void setAbout(String about) {
+        this.about = about;
     }
 }

@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent">
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DetailsActivity">
@@ -178,23 +185,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView8" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/info_recycler"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
     <TextView
         android:id="@+id/textView14"
         android:layout_width="360dp"
-        android:layout_height="138dp"
+        android:layout_height="320dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:text="Gateway of India, the best place to visit in Mumbai, was built in 1924 by George Willet to honor the visit of King George V and Queen Mary to Mumbai. Visit this place in the early morning or late evening hours to enjoy the cool breeze of the sea with your family sans the crowd. Located next to the iconic Taj Mahal Palace and facing the vast Arabian Sea, the Gateway of India leaves you spellbound in every way possible. Take a ferry ride offered here to experience a stupendous view of this monument right from the sea and you can also visit other main attractions nearby."
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
@@ -203,32 +199,19 @@
         app:layout_constraintTop_toBottomOf="@+id/textView13"
         app:layout_constraintVertical_bias="0.0" />
 
-    <!--    <TextView-->
-    <!--        android:id="@+id/textView15"-->
-    <!--        android:layout_width="361dp"-->
-    <!--        android:layout_height="124dp"-->
-    <!--        android:layout_marginTop="12dp"-->
-    <!--        android:layout_marginEnd="12dp"-->
-    <!--        android:layout_marginBottom="8dp"-->
-    <!--        android:text="The Gateway of India is  India’s most unique landmark, situated in Mumbai, and is located at Apollo Bunder in South Mumbai, on the shore of the Arabian Sea.This architectural marvel scores over any other monument in Mumbai. The foundation stone of the structure was laid on March 31st, 1913, but it took more than 13 years to get completed.A Scottish architect built this symbol by the name of George Wittet to commemorate the visit of King George V and Queen Mary.During British rule, it was used as the entry gate for visitors who can from the west.This is the monument from where the last British troop left India for England in 1947."-->
-    <!--        app:layout_constraintBottom_toTopOf="@+id/button"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintHorizontal_bias="0.0"-->
-    <!--        app:layout_constraintStart_toStartOf="@+id/textView14"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/textView14"-->
-    <!--        app:layout_constraintVertical_bias="0.0" />-->
 
     <Button
         android:id="@+id/button"
         android:layout_width="313dp"
         android:layout_height="46dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="164dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/book_button_bg"
         android:fontFamily="@font/rubik"
-        android:text="Start Booking Your Trip"
+        android:text="@string/hyperlink"
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="@+id/textView14"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

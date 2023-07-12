@@ -16,6 +16,7 @@ import com.rajendra.vacationtourapp.DetailsActivity;
 import com.rajendra.vacationtourapp.R;
 import com.rajendra.vacationtourapp.model.RecentsData;
 
+import java.text.BreakIterator;
 import java.util.List;
 
 public class RecentsAdapter extends RecyclerView.Adapter<RecentsAdapter.RecentsViewHolder> {
@@ -48,7 +49,6 @@ public class RecentsAdapter extends RecyclerView.Adapter<RecentsAdapter.RecentsV
         holder.price.setText(recentsData.getPrice());
         holder.placeImage.setImageResource(recentsData.getImages().get(0));
 
-        final int finalposition= position;
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -57,6 +57,8 @@ public class RecentsAdapter extends RecyclerView.Adapter<RecentsAdapter.RecentsV
                 i.putExtra("placeName", recentsData.getPlaceName());
                 i.putExtra("price", recentsData.getPrice());
                 i.putExtra("images", recentsData.getImages());
+                i.putExtra("hyperlink", recentsData.getHyperlink());
+                i.putExtra("about",recentsData.getAbout());
                 context.startActivity(i);
             }
         });
@@ -70,8 +72,9 @@ public class RecentsAdapter extends RecyclerView.Adapter<RecentsAdapter.RecentsV
 
     public static final class RecentsViewHolder extends RecyclerView.ViewHolder{
 
+
         ImageView placeImage;
-        TextView placeName, cityName, price;
+        TextView placeName, cityName, price, about;
 
         public RecentsViewHolder(@NonNull View itemView) {
             super(itemView);
